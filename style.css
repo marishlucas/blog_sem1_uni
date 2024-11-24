@@ -145,7 +145,7 @@ ul {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(3px);
+  filter: blur(4px);
 
   z-index: -2;
 }
@@ -183,8 +183,8 @@ ul {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   line-height: 1.6;
-  color: #333;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+  color: black;
+  font-weight: 500;
 }
 
 .hero-button {
