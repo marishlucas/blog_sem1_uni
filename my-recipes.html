@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog | Uni</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1 class="header-title">My pancake blog</h1>
+      <div class="header-controls">
+        <button class="theme-toggle">🌙</button>
+        <svg
+          class="hamburger-menu"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </div>
+      <nav id="nav-menu">
+        <ul>
+          <li>
+            <a href="/" class="nav-link"> Home </a>
+          </li>
+          <li>
+            <a href="/recipes.html" class="nav-link"> Recipes </a>
+          </li>
+          <li>
+            <a href="/my-recipes.html" class="nav-link"> My recipes </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="add-recipe-section">
+        <h2>Add New Recipe</h2>
+        <form id="recipeForm" class="recipe-form">
+          <div class="form-group">
+            <label for="recipeName">Recipe Name</label>
+            <input
+              type="text"
+              id="recipeName"
+              placeholder="Enter recipe name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="recipeDescription">Description</label>
+            <textarea
+              id="recipeDescription"
+              placeholder="Enter recipe description"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="authorEmail">Your Email</label>
+            <input
+              type="email"
+              id="authorEmail"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="difficultyRange">Difficulty Level</label>
+            <div class="range-container">
+              <input
+                type="range"
+                id="difficultyRange"
+                min="1"
+                max="5"
+                value="3"
+              />
+              <span id="difficultyValue">3</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="recipeType">Recipe Type</label>
+            <select id="recipeType">
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+              <option value="dessert">Dessert</option>
+              <option value="snack">Snack</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submit-btn">Add Recipe</button>
+        </form>
+      </section>
+
+      <section class="saved-recipes-section">
+        <h2>Saved Recipes</h2>
+        <div id="recipeList" class="recipe-grid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="copyright">&copy; 2024 Perfect Pancakes</p>
+        <nav class="footer-nav">
+          <a href="#" class="footer-link">Home</a>
+          <a href="#" class="footer-link">Recipes</a>
+          <a href="#" class="footer-link">About</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+  <script src="index.js"></script>
+  <script src="my-recipes.js"></script>
+</html>
